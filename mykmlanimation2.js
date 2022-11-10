@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
     document.getElementsByTagName("body")[0].style.opacity = "1";
 
     var forecastIndex = 0;
-    var forecastInterval = setInterval(nextForecast, 750); // 1000 = 1sec
+    var forecastInterval = setInterval(nextForecast, 500); // 1000 = 1sec
 
     function nextForecast() {
         goToForecast((forecastIndex + 1) % totalForecasts);

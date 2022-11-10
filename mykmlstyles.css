@@ -17,6 +17,19 @@ img.leaflet-image-layer.leaflet-zoom-animated {
     z-index: 900;
 }
 
+path.leaflet-interactive {
+    -webkit-tap-highlight-color: transparent;
+    stroke: rgb(222,59,203);
+    stroke-opacity: 0.60;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: transparent;
+    fill-opacity: 0.2;
+    fill-rule: evenodd;
+    z-index: 800;
+}
+
 .button.container {
     z-index: 900;
     height: 10%;
@@ -155,3 +168,15 @@ img.leaflet-image-layer.leaflet-zoom-animated {
    color: black;
    text-align: center;
 }
+
+.legend {
+    z-index: 900;
+    top: 19%;
+    position: absolute;
+    left: 48%;
+    width: 100%;
+    opacity: 0.85;
+    background-color: transparent;
+    color: transparent;
+    text-align: center;
+ }
