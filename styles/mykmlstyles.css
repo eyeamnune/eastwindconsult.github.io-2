@@ -284,14 +284,14 @@ ul.legendLabel {
     top: center;
     left: center;
     right: center;
-    width: 9.5%;
-    height: 9.5%;
+    width: 10%;
+    height: 10%;
     opacity: 0.65;
     background-color: transparent;
     color: black;
     text-align: center;
  }
- 
+/* 
  .logo img {
      width: 100%;
      height: 100%;
@@ -303,7 +303,7 @@ ul.legendLabel {
      color: black;
      text-align: center;
  }
-
+*/
  
  .legend {
     display: inline-flex;
