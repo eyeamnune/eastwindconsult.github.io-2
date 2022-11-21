@@ -42,7 +42,7 @@ path.leaflet-interactive {
 #fslides {
     display: inline-block;
     position: absolute;
-    left: 18.5%;
+    left: 19%;
     height: 10px;
     padding: 0px;
     margin: 0px;
@@ -64,10 +64,32 @@ path.leaflet-interactive {
     text-align: center;
 }
 
-.fslide li {
+li.fslide {
     display: none;
     padding: 0px 5px 0px 5px;
     text-align: center;
+    font-size: 3vh;
+}
+
+#previous {
+    width: 20%;
+    height:15%;
+    text-align: center;
+    font-size: 4vh;
+}
+
+#pause {
+    width: 20%;
+    height:15%;
+    text-align: center;
+    font-size: 4vh;
+}
+
+#next {
+    width: 20%;
+    height:15%;
+    text-align: center;
+    font-size: 4vh;    
 }
 
 .controls {
@@ -79,12 +101,19 @@ path.leaflet-interactive {
     background: transparent;
     color: rgba(17, 11, 11, 0.733);
     border: transparent;
-    padding: 10px 0px;
+  
     font-size: 30px;
     cursor: pointer;
+
     margin: 10px 0px 0px 10px;
-    height: 75px;
+
+    padding: 10px;
+    
+    height: 50px;
     width: 100px;
+
+    background: transparent;
+
 }
 
 .controls:hover,
@@ -100,28 +129,35 @@ path.leaflet-interactive {
 
 .buttons {
     position: absolute;
-    bottom: 2.5%;
+    bottom: 5%;
     z-index: 800;
-    /* left: 37.5%; */
+    left: 5%;
+    width: 30%;
+    height: 10%;
+    font-size: 2vh;
 }
 
 #capture  {
     position: absolute;
-    bottom: 3.5%;
+    bottom: 5%;
     border-radius: 50px;
-    border-left-color:yellow;
-    border-right-color: blue;
-    border-top-color: red;
-    border-bottom-color: green;
-    border-style:double ;
-    border-width: medium;
-    background: white;
-    z-index: 900;
-    right: 0.5%;
-    width: 8rem;
-    height: 2rem;
-}
 
+    border-right: 0.25vw  solid #FFD700;
+    border-bottom: 0.25vw  solid #B22222;
+    border-left: 0.25vw  solid #00bfff;
+    border-top: 0.25vw solid #68fa07;
+
+/*    background: rgba(156, 213, 218, 0.205);  */
+    background: rgba(185, 173, 173, 0.651);
+
+    z-index: 900;
+    right: 1.0%;
+    width:10%;
+    height: 6%;
+
+    text-align: center;
+    font-size: 2.125vh;
+}
 
 .video {
     visibility: hidden;
@@ -133,14 +169,21 @@ path.leaflet-interactive {
     text-align: left;
     left: 7.25%;
     top: 1%;
-    padding: 0px 10px 0px 10px;
-    margin: 0px;
+    padding: 0% ;
+    margin: 0%;
     opacity: 0.75;
     width: 83%;
     background: white;
     z-index: 900;
     border-style: none;
-    border-radius: 50px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 12.5px;
+    border-top-left-radius: 12.5px;
+    border-right: 0.25vw  solid rgb(236, 236, 51);
+    border-bottom: 0.25vw  solid rgb(245, 62, 62);
+    border-left: 0.25vw  solid rgb(8, 148, 230);
+    border-top: 0.25vw solid rgb(30, 173, 25);
 }
 
 .legendContainer .legendTitle {
@@ -170,7 +213,19 @@ path.leaflet-interactive {
     list-style: none;
 }
 
-.legendContainer ul.legendLabel li span {
+.legendLabel b {
+    text-align: center;
+    font-size: 2vh;
+}
+
+ul.legendLabel {
+    display: inline-block;
+    float: left;
+    height: 5%;
+    width: 100%;
+}
+
+.legendContainer li span {
     display: inline-block;
     float: left;
     height: 15px;
@@ -190,3 +245,46 @@ path.leaflet-interactive {
    color: black;
    text-align: center;
 }
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: grab;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: black;
+    text-align: center;
+}
+
+#loader {
+
+    position: absolute;
+    left: 47.55vw;
+    top: 39vh;
+
+    background-color: transparent;
+    color: black;
+
+    text-align: center;
+
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+
+    z-index: 925;
+
+    animation: spin 2.5s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+
+    border-top: 5px solid yellow;
+    border-right: 5px solid green;
+    border-bottom: 5px solid red;
+    border-left: 5px solid blue;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
