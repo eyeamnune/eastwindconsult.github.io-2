@@ -278,32 +278,28 @@ ul.legendLabel {
 }
 
 .logo {
-    display: inline-flex;
-    z-index: 950;
-    position: absolute;
-    top: center;
-    left: center;
-    right: center;
-    width: 10%;
-    height: 10%;
-    opacity: 0.65;
-    background-color: transparent;
+   z-index: 900;
+   position: absolute;
+   left: 0%;
+   bottom: 50%;
+   width: 100%;
+   opacity: 0.25;
+   background-color: transparent;
+   color: black;
+   text-align: center;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: grab;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
     color: black;
     text-align: center;
- }
-/* 
- .logo img {
-     width: 100%;
-     height: 100%;
-     -webkit-tap-highlight-color: transparent;
-     cursor: grab;
-     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-     font-size: 0.75rem;
-     line-height: 1.5;
-     color: black;
-     text-align: center;
- }
-*/
+}
  
  .legend {
     display: inline-flex;
