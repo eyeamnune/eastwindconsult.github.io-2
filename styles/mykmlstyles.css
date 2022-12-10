@@ -12,13 +12,15 @@ body {
     border: transparent;
 }
 
-/*
+
 img.leaflet-image-layer.leaflet-zoom-animated {
     background: transparent;
     z-index: 350;
     max-width: 100%;
     min-width: 100%;
+/*    Filter: Chroma(Color = #FFFFFF);    */
 }
+
 img.leaflet-image-layer.leaflet-zoom-animated {
     -webkit-tap-highlight-color: transparent;
     cursor: grab;
@@ -41,8 +43,8 @@ img.leaflet-image-layer.leaflet-zoom-animated {
     width: 1053px;
     height: 1187px;
 }
-.leaflet-pane.leaflet-map-pane .leaflet-pane.leaflet-overlay-pane  svg g path.leaflet-interactive  {
-    
+
+.leaflet-pane.leaflet-map-pane .leaflet-pane.leaflet-overlay-pane  svg g path.leaflet-interactive  {   
     z-index: 1;
     -webkit-tap-highlight-color: transparent;
     stroke: rgb(222,59,203);
@@ -56,7 +58,80 @@ img.leaflet-image-layer.leaflet-zoom-animated {
     max-width: 100%;
     min-width: 100%;
 }
-*/
+
+/* CSS for svg */
+
+.leaflet-map-pane svg {
+    z-index: 950;
+    opacity: 0.6;
+}
+
+.leaflet-overlay-pane svg {
+    -moz-user-select: none;
+
+}
+
+img.leaflet-pane.leaflet-overlay-pane {
+
+    fill-opacity: 0;
+    fill: none;
+
+    stroke: none;
+    stroke-opacity: 0;
+
+    filter: chroma(color=#ffffff);
+
+    -webkit-tap-highlight-color: transparent;
+   
+    cursor: grab;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 0 0;
+    pointer-events: none;
+    max-width: none !important;
+    max-height: none !important;
+    padding: 0;
+    background: transparent;
+    min-width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(252px, -1615px, 0px) rotate(0deg);
+    width: 2105px;
+    height: 2375px;
+
+}
+
+img.leaflet-image-layer.leaflet-zoom-animated {
+
+    fill-opacity: 0;
+    fill: none;
+    filter: chroma(color=#ffffff);
+    -webkit-tap-highlight-color: transparent;
+    cursor: grab;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 0 0;
+    pointer-events: none;
+    max-width: none !important;
+    max-height: none !important;
+    padding: 0;
+    background: transparent;
+    min-width: 100%;
+    z-index: 990;
+    opacity: 1;
+    transform: translate3d(2248px, 431px, 0px) rotate(0deg);
+    width: 1053px;
+    height: 1187px;
+}
+
 
 path.leaflet-interactive {
     -webkit-tap-highlight-color: transparent;
@@ -413,7 +488,78 @@ ul.legendLabel {
 .legendContainer_wind  .legendScale_wind  ul li {
     display: inline-block;
     float: left;
-    width: 5.75%;
+    width: 3.28%;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+}
+
+.legendLabel_wind  b {
+    text-align: center;
+    font-size: 2vh;
+}
+
+ul.legendLabel_wind  {
+    display: inline-block;
+    float: left;
+    height: 5%;
+    width: 100%;
+}
+
+.legendContainer_wind  li span {
+    display: inline-block;
+    float: left;
+    height: 15px;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.legendContainer_wind {
+    display: inline-block;
+    position: absolute;
+    text-align:center;
+    left: 4.75%;
+    top: 1%;
+    padding: 0% ;
+    margin: 0%;
+    opacity: 0.75;
+    width: 83%;
+    background: white;
+    z-index: 900;
+    border-style: none;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 12.5px;
+    border-top-left-radius: 12.5px;
+    border-right: 0.25vw  solid rgb(233, 233, 227);
+    border-bottom: 0.25vw  solid rgb(50, 161, 235);
+    border-left: 0.25vw  solid  rgb(233, 233, 227);
+    border-top: 0.25vw solid rgb(8, 148, 230);
+}
+
+.legendContainer_wind  .legendTitle_wind  {
+    width: 100%;
+    text-align: left;
+    left: 60%;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 90%;
+}
+
+.legendContainer_wind  .legendScale_wind  ul {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    float: left;
+    list-style: none;
+}
+
+.legendContainer_wind  .legendScale_wind  ul li {
+    display: inline-block;
+    float: left;
+    width: 3.28%;
     margin-bottom: 0px;
     text-align: center;
     font-size: 80%;
